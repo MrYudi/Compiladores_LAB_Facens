@@ -1,0 +1,34 @@
+DECLARANDO VARIÁVEIS
+    <nome_var> = 2
+    <nome_var> = "testo"
+
+PRINT
+    mostra "alguma_palavra"
+
+CONDIÇÕES
+(if..else)
+    passa ( condição )
+        <bloco de código>
+    repassa
+        <bloco de código>
+    sair
+
+(case..when..end)
+    choices valor
+
+        choice 1
+              
+        choice 2
+
+        badchoice 
+
+    sair
+
+LAÇOS DE REPETIÇÃO
+(for..in..end)
+    papagaio <indice> em <intervalo>
+        <bloco de código>
+    sair
+
+
+

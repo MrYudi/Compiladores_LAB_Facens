@@ -1,0 +1,62 @@
+TOKENS
+<name-token, value>
+
+	PALAVRAS RESERVADAS (KEYWORDS)
+	
+		<KEYWORDS, sair>
+
+		PRINT
+			<KEYWORDS, mostra>
+
+		ESTRUTURAS DE DECISÃO
+			<KEYWORDS, passa>
+			<KEYWORDS, repassa>
+
+			<KEYWORDS, choices>
+			<KEYWORDS, choice>
+			<KEYWORDS, badchoice>
+		
+		ESTRUTURAS DE REPETIÇÃO
+			<KEYWORDS, papagaio>
+			<KEYWORDS, em>
+			
+	NUMÉRICOS
+		<numero, [0-9]>
+
+	IDENTIFICADORES
+		<indice, [a-zA-Z][a-zA-Z0-9]*>
+
+	STRING
+		<string, "([^"]*)">
+		
+	OPERADORES
+		OPERADORES ARITMÉTICOS
+			<OP, +>
+			<OP, ->
+			<OP, *>
+			<OP, />
+		
+		OPERADORES DE ATRIBUIÇÃO
+			<OP, =>
+			
+		OPERADORES DE COMPARAÇÃO
+			<OP, <>
+			<OP, >>
+			<OP, <=>
+			<OP, >=>
+			<OP, !=>
+			<OP, ==>
+		
+		OPERADORES LÓGICOS		
+			<OP, !>
+			<OP, ||>
+			<OP, &&>
+
+	DELIMITADORES
+		<DELIMIT, {>
+		<DELIMIT, }>
+		<DELIMIT, [>
+		<DELIMIT, ]>
+		<DELIMIT, (>
+		<DELIMIT, )>
+		
