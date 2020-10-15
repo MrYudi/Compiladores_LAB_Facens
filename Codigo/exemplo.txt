@@ -1,4 +1,5 @@
 val = 0
+pega = 1
 mostra "primeiro_valor"
 n1 = pega
 
