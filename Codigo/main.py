@@ -206,10 +206,6 @@ class Parser():
                                 expr
                             <KEYWORDS , choice> expr
                                 expr
-                            <KEYWORDS , choice> expr
-                                expr
-                            <KEYWORDS , choice> expr
-                                expr
                             <KEYWORDS , badchoice>
                                 expr
                          <KEYWORDS , sair>
