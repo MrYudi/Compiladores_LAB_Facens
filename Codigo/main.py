@@ -188,8 +188,48 @@ class Parser():
             print(self.token_atual)
             self.proximo()
         
-    # Raiz
-    # Acresentar outros sintaxe [IF, ELSE, FOR, CASE E ETC...]
+    # IF ELSE
+    def funcaoCondicao(self):
+        """
+        condicao ::= <KEYWORDS , passa> <DELIMIT , (> expr <DELIMIT , )>
+                        expr
+                     <KEYWORDS , repassa>
+                        expr
+                     <KEYWORDS , sair>
+        """
+
+    # Switch Case
+    def funcaoCondicaoCase(self):
+        """
+        condicaoCase ::= <KEYWORDS , choices> expr
+                            <KEYWORDS , choice> expr
+                                expr
+                            <KEYWORDS , choice> expr
+                                expr
+                            <KEYWORDS , choice> expr
+                                expr
+                            <KEYWORDS , choice> expr
+                                expr
+                            <KEYWORDS , badchoice>
+                                expr
+                         <KEYWORDS , sair>
+        """
+
+    # For
+    def funcaoLoop(self):
+        """
+        loop ::= <KEYWORDS , papagaio> expr <KEYWORDS , em> expr
+                    expr
+                 <KEYWORDS , sair>
+        """
+
+    # print
+    def funcaoPrint(self):
+        """
+            print ::= <KEYWORDS , mostra> <string , "">
+        """
+
+
     def statement(self):
         """
         statement ::= expr
