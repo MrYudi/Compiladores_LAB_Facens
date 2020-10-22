@@ -39,7 +39,7 @@ class Token():
         self.valor = valor
         
     def __str__(self):
-        return '<%s , %s>' % (self.tipo, self.valor)
+        return '<%s %s>' % (self.tipo, self.valor)
 
 # -----------------------------------------   
 # LEXICA
@@ -222,18 +222,32 @@ class Parser():
     # print
     def funcaoPrint(self):
         """
-            print ::= <KEYWORDS , mostra> <string , "">
+        print ::= <KEYWORDS , mostra> <string , "">
         """
 
+        self.use(T_KEYWORDS,T_KEYWORDS_PRINT)
+        
+        self.use(T_STRING)
 
     def statement(self):
         """
-        statement ::= expr
-        """
+        statement ::= 
+        """ 
 
-        print("E =")
-        x = self.expr()
-        print("= ", x)
+        if str(self.token_atual) == str(Token(T_KEYWORDS,T_KEYWORDS_IF)):
+            self.funcaoCondicao()
+
+        elif str(self.token_atual) == str(Token(T_KEYWORDS,T_KEYWORDS_SWITCH)):
+            self.funcaoCondicaoCase
+
+        elif str(self.token_atual) == str(Token(T_KEYWORDS,T_KEYWORDS_FOR)):
+            self.funcaoLoop()
+
+        elif str(self.token_atual) == str(Token(T_KEYWORDS,T_KEYWORDS_PRINT)):
+            self.funcaoPrint()
+
+
+        #self.expr()
                
     def expr(self):
         """
@@ -298,7 +312,7 @@ class Parser():
 # Analise lexica
 print("LEXICA")
 tokens = []
-arquivo = open('Codigo\exemplo.txt','r')
+arquivo = open('Codigo\expPrint.txt','r')
 ln = 1
 for l in arquivo.readlines():
     l = l.replace('\n','') # remove a quebra de linha
@@ -319,3 +333,7 @@ print([str(t) for t in tokens])
 print("SINTATICA")
 parser = Parser(tokens)
 parser.statement()
+
+# Verificar "bloco de codigo usando \n"
+## Criar token de \n
+## Durante o codigo, deve ignora o \n, exceto os pontos que realmente precisa do \n

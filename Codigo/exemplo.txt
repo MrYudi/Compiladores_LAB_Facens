@@ -13,8 +13,8 @@ mostra "4.Divisão"
 
 opcao = pega
 
-passa ( n3 < pega )
-   n3 = pega
+passa ( n3 < pega ) 
+   n3 = pega 
 repassa
    pega = val
 sair
