@@ -1,0 +1,24 @@
+// Estrutura do if, else if, else
+A => I C F
+I C F => I C E F
+E F => E I C F
+
+// Condições
+C => V
+V => (V)
+V => V OP V
+
+// Possiveis operadores de comparação
+OP => ==
+OP => <
+OP => >
+OP => >=
+OP => <=
+OP => !=
+OP => &&
+OP => ||
+
+V => [variaveis ou constante]
+F = end
+I => if
+E => else

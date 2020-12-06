@@ -1,0 +1,31 @@
+val = 0
+mostra("primeiro valor")
+n1 = pega
+
+mostra("segundo valor")
+n2 = pega
+
+mostra "1.Adição"
+mostra "2.Subtração"
+mostra "3.Multiplicação"
+mostra "4.Divisão"
+
+opcao = pega
+
+choices op
+     choice 1
+        val = n1 + n2
+        mostra "#{val}"
+     choice 2
+        val = n1 - n2
+        mostra "#{val}"
+     choice 3
+        val = n1 * n2
+        mostra "#{val}"
+     choice 4
+        val = n1 / n2
+        mostra "#{val}"
+     badchoice
+        mostra "escolha inválida"
+sair
+

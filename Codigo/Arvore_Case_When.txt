@@ -1,0 +1,34 @@
+CODIGO DE EXEMPLO:
+grade = 82
+case grade
+    when 90..100
+        puts 'Hooray!'
+    when 80...90
+        puts 'OK job'
+    else
+        puts 'You failed!'
+end
+
+
+ARVORE:
+C => case
+W => \n when H M
+M => \n when H M | \n when H F | \n else F
+F => \n end 
+V => literal
+H => const = "texto" - [0-9]
+
+
+A => C V W
+C V W => case V W 
+case V W => case literal W
+case literal W => case literal \n when H M
+case literal \n when H M => case literal \n when const M
+case literal \n when const M => case literal \n when const \n when H M
+case literal \n when const \n when H M => case literal \n when const \n when const M
+case literal \n when const \n when const M => case literal \n when const \n when const \n when H F 
+case literal \n when const \n when const \n when H F => case literal \n when const \n when const \n when const F
+case literal \n when const \n when const \n when const F => case literal \n when const \n when const \n when const \n End
+
+
+

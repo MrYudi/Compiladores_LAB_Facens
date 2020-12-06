@@ -1,0 +1,25 @@
+CODIGO DE EXEMPLO:
+    For i in 4
+        print i
+    End
+
+
+ARVORE:
+ε
+L -> literal+ 
+N -> numérico
+C -> \n codigo C | \n codigo
+K -> For
+I -> in
+E -> \n End
+
+
+A -> K L I N C E
+K L I N C E -> For L I N C E
+For L I N C E -> For literal I N C E
+For literal I N C E -> For literal in N C E
+For literal in N C E -> For literal in numérico C E
+For literal in numérico C E -> For literal in numérico \n codigo C E
+For literal in numérico \n codigo C E -> For literal in numérico \n codigo \n codigo C E
+For literal in numérico \n codigo \n codigo C E -> For literal in numérico \n codigo \n codigo \n codigo E
+For literal in numérico \n codigo \n codigo \n codigo E -> For literal in numérico \n codigo \n codigo \n codigo \n End
